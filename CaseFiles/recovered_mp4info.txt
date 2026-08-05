@@ -1,0 +1,10 @@
+File:
+  major brand:      XAVC
+  minor version:    10b1fff
+  compatible brand: XAVC
+  compatible brand: mp42
+  compatible brand: nras
+  compatible brand: iso6
+  fast start:       no
+
+No movie found in the file

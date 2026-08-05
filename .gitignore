@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+
+ffmpeg/
+Bento4/
+
+*.MOV
+*.MP4
+Recovered*/
+ENABLE/
+
+patched_moov.bin
+candidate_clip*.mp4
+debug.txt
+errors.txt
+project_tree.txt

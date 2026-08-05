@@ -1,0 +1,4 @@
+# Add Python dependencies here when finalized.
+# construct
+# bitstring
+# pytest

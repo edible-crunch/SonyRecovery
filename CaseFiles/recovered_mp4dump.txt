@@ -1,0 +1,10 @@
+[ftyp] size=8+24
+  major_brand = XAVC
+  minor_version = 10b1fff
+  compatible_brand = XAVC
+  compatible_brand = mp42
+  compatible_brand = nras
+  compatible_brand = iso6
+[50524F4621D2-4FCE-BB88-695C-FAC9C740] size=24+159
+[free] size=8+130833
+[mdat] size=16+2348810240

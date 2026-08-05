@@ -1,0 +1,95 @@
+File:
+  major brand:      XAVC
+  minor version:    10b1fff
+  compatible brand: XAVC
+  compatible brand: mp42
+  compatible brand: nras
+  compatible brand: iso6
+  fast start:       no
+
+Movie:
+  duration:   960960 (movie timescale units)
+  duration:   16016 (ms)
+  time scale: 60000
+  fragments:  no
+
+Found 3 Tracks
+Track 1:
+  flags:        7 ENABLED IN-MOVIE IN-PREVIEW
+  id:           1
+  type:         Video
+  duration: 16016 ms
+  language: und
+  media:
+    sample count: 960
+    timescale:    60000
+    duration:     960960 (media timescale units)
+    duration:     16016 (ms)
+    bitrate (computed): 150310.481 Kbps
+  display width:  3840.000000
+  display height: 2160.000000
+  frame rate (computed): 59.940
+  Sample Description 0
+    Coding:       hvc1 (H.265)
+    Codec String: hvc1.2.4.H153.b0
+    HEVC Profile Space:       0
+    HEVC Profile:             2 (Main 10)
+    HEVC Profile Compat:      20000000
+    HEVC Level:               5.1
+    HEVC Tier:                1
+    HEVC Chroma Format:       1 (4:2:0)
+    HEVC Chroma Bit Depth:    10
+    HEVC Luma Bit Depth:      10
+    HEVC Average Frame Rate:  0
+    HEVC Constant Frame Rate: 1
+    HEVC NALU Length Size:    4
+    HEVC Sequences:
+      {
+        Array Completeness=1
+        Type=32 (VPS_NUT - Video parameter set)
+        40010c01ffff222000000300b0000003000003009911c0c00003e90000ea6014
+      }
+      {
+        Array Completeness=1
+        Type=33 (SPS_NUT - Sequence parameter set)
+        420101222000000300b00000030000030099a001e020021c4d8d11ee4212012cb9ecfe5525eacae4b524ba94a85629249549faaf4180b70202021400003e90000ea601d0d7795c00131280002625a000262500004c4b4ae10082
+      }
+      {
+        Array Completeness=1
+        Type=34 (PPS_NUT - Picture parameter set)
+        4401701ca3203f1049327158523220d118ae23151451049327158523220d118ae231514510ab5d7afafc9fc47e6f8af0c736226885264e4f27cdf93f93f27c8b66e6c931442ad75ebebf27f11f9be2bc31cd889a21499393c9f37e4fe4fc9f22d9b9b24c51155aebd7d7e4fe23f37c578639b113445499393c9f37e4fe4fc9f22d9b9b24c51155aebd7d7e4fe23f37c578639b113445499393c9f37e4fe4fc9f22d9b9b24c51155aebd7d7e4fe23f37c578639b11344556baf5f5f93f88fcdf15e18e6c44c90
+        4401240728c80fc40893105901a064300939439080d1818e14c2918510224c4164068190c024e2021080d1818e14c2918510493f213293e4932c98889c60509942a09218866093c67fe50a44620f30839cc6193cd19f8c7f429fa11f15e28b218a453144124fc84ca4f924cb26222718142650a82486219824f19ff881111883cc20e731864f3467e31fd0a7e847c578a2c862914c511249f909949f249964c444e30284ca150490c433049e33ff28c1111883cc20e731864f3467e31fd0a7e847c578a2c862914c511249f909949f249964c444e30284ca150490c433049e33ff111111883cc20e731864f3467e31fd0a7e847c578a2c862914c511249f909949f249964c444e30284ca150490c433049e33ff11249f909949f249964c444e30284ca150490c433049e33fe90
+      }
+    Width:       3840
+    Height:      2160
+    Depth:       24
+Track 2:
+  flags:        7 ENABLED IN-MOVIE IN-PREVIEW
+  id:           2
+  type:         Audio
+  duration: 16016 ms
+  language: und
+  media:
+    sample count: 768768
+    timescale:    48000
+    duration:     768768 (media timescale units)
+    duration:     16016 (ms)
+    bitrate (computed): 1536.000 Kbps
+  Sample Description 0
+    Coding:       twos (Uncompressed 16-bit Audio)
+    Codec String: twos
+Track 3:
+  flags:        7 ENABLED IN-MOVIE IN-PREVIEW
+  id:           3
+  type:         Unknown [meta]
+  duration: 16016 ms
+  language: und
+  media:
+    sample count: 960
+    timescale:    60000
+    duration:     960960 (media timescale units)
+    duration:     16016 (ms)
+    bitrate (computed): 9329.550 Kbps
+  Sample Description 0
+    Coding:       rtmd
+    Codec String: rtmd

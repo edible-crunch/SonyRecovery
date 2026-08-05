@@ -1,0 +1,28 @@
+SonyRecovery Case Checksums
+===========================
+
+Healthy Reference
+-----------------
+File:
+C:\Users\johne\OneDrive\Desktop\ENABLE\C0946.MP4
+
+SHA256:
+19c0c61b0cf0bb4cb56bfc542d5c85bef73d443c38111d23e2757bbcbd604c2c
+
+
+Recovered MOV
+-------------
+File:
+C:\Users\johne\OneDrive\Desktop\ENABLE\RingConn Recovered Videos\Recovered_D1\Videos\mov\MOV_01m54s_000003.MOV
+
+SHA256:
+ab86bbfe9a02b24ddd36e6baf7a0660cad46597fbeed42856c68a3c76c2e9cc6
+
+
+Recovered MP4
+-------------
+File:
+C:\Users\johne\OneDrive\Desktop\ENABLE\RingConn Recovered Videos\Recovered_D1\Videos\mp4\MP4_000003.MP4
+
+SHA256:
+cc045b76263c2600750696ddd2b5e7594fbc498ac5c351898a278afaa37de253
