@@ -1,60 +1,65 @@
 import struct
 
-from repair.stco_generator import generate_stco
 
-RECOVERED_MP4 = (
-    r"C:\Users\johne\OneDrive\Desktop\ENABLE"
-    r"\RingConn Recovered Videos\Recovered_D1"
-    r"\Videos\mp4\MP4_000003.MP4"
-)
+def build_stco_atom(offsets):
+    """
+    Build a complete STCO atom.
 
-OUTPUT = "rebuilt_stco.bin"
+    Parameters
+    ----------
+    offsets : iterable[int]
+        Absolute chunk offsets.
 
-# ---------------------------------------------------------
+    Returns
+    -------
+    bytes
+        Complete STCO atom.
+    """
 
-offsets = generate_stco(RECOVERED_MP4)
+    payload = bytearray()
 
-print()
-print("=" * 60)
-print("BUILDING STCO")
-print("=" * 60)
+    # version + flags
+    payload += b"\x00\x00\x00\x00"
 
-print("Entries :", len(offsets))
+    # entry count
+    payload += struct.pack(">I", len(offsets))
 
-# ---------------------------------------------------------
-# Build payload
-# ---------------------------------------------------------
+    # chunk offsets
+    for offset in offsets:
+        payload += struct.pack(">I", offset)
 
-payload = bytearray()
+    atom = bytearray()
 
-# version / flags
-payload += b"\x00\x00\x00\x00"
+    atom += struct.pack(">I", len(payload) + 8)
+    atom += b"stco"
+    atom += payload
 
-# entry count
-payload += struct.pack(">I", len(offsets))
+    return bytes(atom)
 
-# offsets
-for offset in offsets:
-    payload += struct.pack(">I", offset)
 
-# ---------------------------------------------------------
-# Wrap atom
-# ---------------------------------------------------------
+if __name__ == "__main__":
 
-atom = bytearray()
+    # Small self-test
 
-atom += struct.pack(">I", len(payload) + 8)
-atom += b"stco"
-atom += payload
+    test_offsets = [
+        100,
+        200,
+        300,
+    ]
 
-# ---------------------------------------------------------
+    atom = build_stco_atom(test_offsets)
 
-with open(OUTPUT, "wb") as f:
-    f.write(atom)
+    print("=" * 60)
+    print("STCO BUILDER")
+    print("=" * 60)
 
-print()
-print("[OK] Written")
-print(OUTPUT)
+    print()
 
-print()
-print("Atom size :", len(atom))
+    print("Entries :", len(test_offsets))
+    print("Atom size :", len(atom))
+
+    with open("test_stco.bin", "wb") as f:
+        f.write(atom)
+
+    print()
+    print("[OK] test_stco.bin written")
