@@ -94,5 +94,29 @@ def main():
     editor = MoovEditor(MOOV)
 
     print("Ready.")
+
+    print()
+    print("Replacing Video STSZ...")
+
+    video_track = tracks["vide"]
+    video_stsz_offset = video_track["stsz"].offset
+
+    with open(STSZ, "rb") as f:
+        rebuilt_stsz = f.read()
+
+    delta = editor.replace_atom(
+        video_stsz_offset,
+        rebuilt_stsz,
+    )
+
+    print(f"Video STSZ delta : {delta:+,}")
+
+    print()
+    print("Saving patched MOOV...")
+
+    editor.save(PATCHED_MOOV)
+
+    print()
+    print("Finished.")
 if __name__ == "__main__":
     main()
