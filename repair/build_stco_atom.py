@@ -39,8 +39,7 @@ def build_stco_atom(offsets):
 
 if __name__ == "__main__":
 
-    # Small self-test
-
+    # Simple self-test
     test_offsets = [
         100,
         200,
@@ -52,9 +51,7 @@ if __name__ == "__main__":
     print("=" * 60)
     print("STCO BUILDER")
     print("=" * 60)
-
     print()
-
     print("Entries :", len(test_offsets))
     print("Atom size :", len(atom))
 
