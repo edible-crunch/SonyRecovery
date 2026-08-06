@@ -22,6 +22,13 @@ def get_tracks(filename):
 
             current = {
                 "trak": atom,
+
+                # Parent containers
+                "mdia": None,
+                "minf": None,
+                "stbl": None,
+
+                # Child atoms
                 "tkhd": None,
                 "mdhd": None,
                 "hdlr": None,
@@ -37,8 +44,23 @@ def get_tracks(filename):
             continue
 
         # -------------------------------------------------
+        # Parent containers
+        # -------------------------------------------------
 
-        if atom.type == "tkhd":
+        if atom.type == "mdia":
+            current["mdia"] = atom
+
+        elif atom.type == "minf":
+            current["minf"] = atom
+
+        elif atom.type == "stbl":
+            current["stbl"] = atom
+
+        # -------------------------------------------------
+        # Leaf atoms
+        # -------------------------------------------------
+
+        elif atom.type == "tkhd":
             current["tkhd"] = atom
 
         elif atom.type == "mdhd":
